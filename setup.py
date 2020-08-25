@@ -4,7 +4,7 @@ with open("README.md", "r") as fh:
     long_description = fh.read()
 
 setuptools.setup(
-    name="exchange-api-gaberust",
+    name="exchange-api",
     version="0.0.1",
     author="Cory Cline, Gabe Rust",
     description="A Framework for Abstracting Crypto-Currency Exchange APIs",
