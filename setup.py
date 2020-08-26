@@ -5,7 +5,7 @@ with open("README.md", "r") as fh:
 
 setuptools.setup(
     name="exchange-api",
-    version="0.0.1",
+    version="1.0.0",
     author="Cory Cline, Gabe Rust",
     description="A Framework for Abstracting Crypto-Currency Exchange APIs",
     long_description=long_description,

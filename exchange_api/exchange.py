@@ -3,9 +3,25 @@ import json
 
 class Exchange:
 
+    # # NAME must be set in subclass.
+    # NAME = "Coinbase"
+    NAME = None
+
+    # # PARAM_NAMES must be set in subclass.
+    # PARAM_NAMES = {
+    #     "api_key": "API Key",
+    #     "api_secret": "API Secret",
+    #     "api_pass": "API Passphrase"
+    # }
+    PARAM_NAMES = None
+
     def __init__(self, params):
         self.params = params
         self.__wallets = {}
+        if self.NAME is None:
+            raise NotImplementedError("Class Variable 'NAME' Requires Non-None Value.")
+        if self.PARAM_NAMES is None:
+            raise NotImplementedError("Class Variable 'PARAM_NAMES' Requires Non-None Value.")
 
     def proc(self):
         raise NotImplementedError("Implementation Required.")
